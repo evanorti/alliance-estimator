@@ -81,14 +81,26 @@ export const nativeFields: NativeField[] = [
     inputPrefix: "$",
   },
   {
+<<<<<<< Updated upstream
     group: "Alliance Asset Parameters",
     label: "Alliance Reward Weight",
+=======
+    group: "Native Staking Parameters",
+    label: "Native Reward Weight",
+    secondaryLabel: "Native assets have a [weight](https://docs.alliance.terra.money/alliance#how-are-rewards-determined) of 1",
+>>>>>>> Stashed changes
     input: true,
     name: "allianceRewardWeight",
   },
   {
+<<<<<<< Updated upstream
     group: "Alliance Asset Parameters",
     label: "Reward Pool Percentage",
+=======
+    group: "Native Staking Parameters",
+    label: "Reward Weight Percentage",
+    secondaryLabel: "% of [reward pool distributed](https://docs.alliance.terra.money/alliance#how-are-rewards-determined) to native stakers",
+>>>>>>> Stashed changes
     input: false,
     name: "rewardPoolPercentage",
     format: (value) => (value * 100).toFixed(4) + " %",
@@ -134,10 +146,17 @@ export const nativeFields: NativeField[] = [
     format: (value) => (value * 100).toFixed(4) + " %",
   },
   {
+<<<<<<< Updated upstream
     group: "Principal",
     name: "principalStakeExcludingRewards",
     label: "Principal stake amount after 1 year take rate",
     secondaryLabel: "Excluding rewards",
+=======
+    group: "Reward Pool Total Value",
+    name: "poolTotalValue",
+    label: "Total",
+    secondaryLabel: "Including Native assets, [Alliance assets](https://docs.alliance.terra.money/alliance#the-take-rate), and LSD appreciation after 1 year",
+>>>>>>> Stashed changes
     input: false,
     advanced: true,
   },
@@ -153,8 +172,13 @@ export const nativeFields: NativeField[] = [
   {
     group: "Yield",
     name: "stakingRewardValue",
+<<<<<<< Updated upstream
     label: "Estimated staking reward value",
     secondaryLabel: "Including LSD yield",
+=======
+    label: "Estimated rewards for native stakers",
+    secondaryLabel: "Value of rewards including Native assets, Alliance assets, [and LSD appreciation](https://docs.alliance.terra.money/alliance#liquid-staking-derivatives)",
+>>>>>>> Stashed changes
     input: false,
     format: (value) => currencyFormat(value),
   },
@@ -162,7 +186,11 @@ export const nativeFields: NativeField[] = [
     group: "Yield",
     name: "stakingEstimatedPercentage",
     label: "Estimated percentage change over 1 year",
+<<<<<<< Updated upstream
     secondaryLabel: "Including LSD appreciation and take rate",
+=======
+    secondaryLabel: "Reward change including Native assets, [Alliance assets](https://docs.alliance.terra.money/alliance#the-take-rate), and LSD appreciation",
+>>>>>>> Stashed changes
     input: false,
     format: (value) => (value * 100).toFixed(4) + " %",
   },
